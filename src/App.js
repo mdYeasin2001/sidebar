@@ -1,10 +1,10 @@
 import './App.css';
-import Sidebar from './Components/ProSidebar/ProSidebar';
 import { IntlProvider } from 'react-intl';
-import Layout from './Layout';
-import messages from './message';
+import Layout from './Components/Layout';
+import messages from './Components/message';
 import './styles/App.scss';
 import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   const [locale, setLocale] = useState('en');

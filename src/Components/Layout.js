@@ -4,12 +4,12 @@ import Main from './Main';
 
 function Layout({ setLocale }) {
   const [rtl, setRtl] = useState(false);
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
   const [image, setImage] = useState(true);
   const [toggled, setToggled] = useState(false);
 
   const handleCollapsedChange = (checked) => {
-    setCollapsed(checked);
+    setCollapsed(!collapsed);
   };
 
   const handleRtlChange = (checked) => {
@@ -32,6 +32,7 @@ function Layout({ setLocale }) {
         rtl={rtl}
         toggled={toggled}
         handleToggleSidebar={handleToggleSidebar}
+        handleCollapsedChange={handleCollapsedChange}
       />
       <Main
         image={image}
